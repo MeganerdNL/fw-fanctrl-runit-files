@@ -13,7 +13,7 @@ sudo ./install.sh --pipx --prefix-dir "/usr/local" --effective-installation-dir 
 ```
    The executables (`ectool` and `fw-fanctrl`) are now in `/usr/local/bin`. `fw-fanctrl` is actually a symlink to the python program located somewhere in `/opt/pipx`.
    
-5. Install the files in this repo on their exact location as in this repo. If you are not running Void Linux the location of the service files could vary, check the documentation of your distribution.
+5. Install the files in this repo on their exact location as in this repo. If you are not running Void Linux the location of the service files could vary, check the documentation of your distribution. **The files should be executable**, `chmod +x` if needed.
 6. Enable the service, on Void Linux (can very on your distrubution):
 ```
 sudo ln -s /etc/service/fw-fanctrl /var/service
