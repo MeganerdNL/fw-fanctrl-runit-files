@@ -2,7 +2,7 @@
 
 ## Description
 
-[fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) is a simple Python CLI service that controls Framework Laptop's fan(s) speed according to a configurable speed/temperature curve. This is was written for systems with `systemd` in mind. Here you will _only_ find the files needed for running it on a `runit` based system, _not_ the actual program, you must install that seperately. Below steps describe the installation on [Void Linux](https://voidlinux.org/), but it should work on any `runit` based systen: location of runit service files can vary based on distribution: keep that in mind when istalling the files in this repository.
+[fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) is a simple Python CLI service that controls Framework Laptop's fan(s) speed according to a configurable speed/temperature curve. This is was written for systems with `systemd` in mind. Here you will _only_ find the files needed for running it on a `runit` based system, _not_ the actual program, you must install that seperately. Below steps describe the installation on [Void Linux](https://voidlinux.org/), but it should work on any `runit` based systen: location of runit service files can be different on your distribution: keep that in mind when istalling the files in this repository.
 
 ## Installation on Void Linux
 1. Install depencencies: `python3-pip`, `python3-pipx`, `python3-build`, `python3-unzip`.
@@ -16,8 +16,8 @@ sudo ./install.sh --pipx --prefix-dir "/usr/local" --effective-installation-dir 
 - There are some `systemd` files installed in `/usr/local/lib/systemd`, we can ignore these.
 - There will be an error about the `systemctl` command that cannot be found: **ignore it**, we will fix that below.
 
-4. Install the 2 files in this repo on their exact location as in this repo (`/etc/sv`). If you are not running Void Linux the location of the service files could vary, check the documentation of your distribution. **The files should be executable**, do a `chmod +x run` or `chmod +x finish` if needed.
-5. Enable the service on Void Linux (command/locations can vary on your distrubution):
+4. Install the 2 files in this repo on their exact location as in this repo (`/etc/sv`). If you are not running Void Linux the location of the service files can be different, check the documentation of your distribution. **The files should be executable**, do a `chmod +x run` or `chmod +x finish` if needed.
+5. Enable the service on Void Linux (command/locations can be differfent on your distrubution):
 ```
 sudo ln -s /etc/sv/fw-fanctrl /var/service
 ```
