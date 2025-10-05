@@ -29,4 +29,5 @@ sudo sv status fw-fanctrl
 ## Control and configuration
 The service can be controlled according to the documentation in [fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl).  
 The main config file is in `/etc/fw-fanctrl/config.json`.  
-Reload the service by doing: `sudo sv restart fw-fanctrl` or by issuing `fw-fanctrl reload`.
+Reload the service by doing: `sudo sv restart fw-fanctrl` or by issuing `fw-fanctrl reload`.  
+See the status with `fw-fanctrl print all`
