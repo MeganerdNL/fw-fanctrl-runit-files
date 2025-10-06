@@ -6,7 +6,7 @@
 
 ## Installation on Void Linux
 1. Install depencencies: `python3-pip`, `python3-pipx`, `python3-build`, `python3-unzip`.
-2. Follow instructions in [fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) and clone their repo
+2. Follow instructions in [fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) and clone that (fw-fanctrl) repository.
 3. Install fw-fanctrl with the following command:
 ```
 sudo ./install.sh --pipx --prefix-dir "/usr/local" --effective-installation-dir "/usr/local/bin" --no-post-install
