@@ -2,7 +2,7 @@
 
 ## Description
 
-[fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) is a simple Python CLI service that controls Framework Laptop's fan(s) speed according to a configurable speed/temperature curve. It's compatible with all 13" and 16" models, both AMD/Intel CPU's, with or without discrete GPU. This nice program was written for systems with `systemd` in mind. Here you will _only_ find the files needed for running it on a `runit` based system, _not_ the actual program, you must install that seperately. Below steps describe the installation on [Void Linux](https://voidlinux.org/), but it should work on any `runit` based systen: location of runit service files can be different on your distribution: keep that in mind when istalling the files in this repository.
+[fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) is a simple Python CLI service that controls Framework Laptop's fan(s) speed according to a configurable speed/temperature curve. It's compatible with all 13" and 16" models, both AMD/Intel CPU's, with or without discrete GPU. This nice program was written for systems with `systemd` in mind. Here you will _only_ find the files needed for running it on a [runit](https://smarden.org/runit) based system, _not_ the actual program, you must install that seperately. Below steps describe the installation on [Void Linux](https://voidlinux.org/), but it should work on any `runit` based systen: location of runit service files can be different on your distribution: keep that in mind when istalling the files in this repository.
 
 ## Installation on Void Linux
 1. Install depencencies: `python3-pip`, `python3-pipx`, `python3-build`, `python3-unzip`.
