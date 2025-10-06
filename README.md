@@ -16,8 +16,9 @@ sudo ./install.sh --pipx --prefix-dir "/usr/local" --effective-installation-dir 
 - There are some `systemd` files installed in `/usr/local/lib/systemd`, we can ignore these.
 - There will be an error about the `systemctl` command that cannot be found: **ignore it**, we will fix that below.
 
-4. Install the 2 files in this repo on their exact location as in this repo (`/etc/sv`). If you are not running Void Linux the location of the service files can be different, check the documentation of your distribution. **The files should be executable**, do a `chmod +x run` or `chmod +x finish` if needed.
-5. Enable the service on Void Linux (command/locations can be differfent on your distrubution):
+4. Clone _this_ (fw-fanctrl-runit-files).
+5. Install the 2 files in this repo on their exact location as in this repo (`/etc/sv`). If you are not running Void Linux the location of the service files can be different, check the documentation of your distribution. **The files should be executable**, do a `chmod +x run` or `chmod +x finish` if needed, but this shouldn't be necessary if you cloned the repository.
+6. Enable the service on Void Linux (command/locations can be differfent on your distrubution):
 ```
 sudo ln -s /etc/sv/fw-fanctrl /var/service
 ```
