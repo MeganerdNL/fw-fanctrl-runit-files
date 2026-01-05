@@ -5,7 +5,7 @@
 [fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) is a simple Python CLI service that controls Framework Laptop's fan(s) speed according to a configurable speed/temperature curve. It's compatible with all 13" and 16" models, both AMD/Intel CPU's, with or without discrete GPU. This nice program was written for systems with `systemd` in mind. Here you will _only_ find the files needed for running it on a [runit](https://smarden.org/runit) based system, _not_ the actual program, you must install that seperately. Below steps describe the installation on [Void Linux](https://voidlinux.org/), but it should work on any `runit` based systen: location of runit service files can be different on your distribution: keep that in mind when istalling the files in this repository.
 
 ## Installation on Void Linux
-1. Install depencencies: `python3-pip`, `python3-pipx`, `python3-build`, `python3-unzip`.
+1. Install dependencies: `python3-pip`, `python3-pipx`, `python3-build`, `unzip`.
 2. Follow instructions in [fw-fanctrl](https://github.com/TamtamHero/fw-fanctrl) and clone that (fw-fanctrl) repository.
 3. Install fw-fanctrl with the following command:
 ```
@@ -17,7 +17,7 @@ sudo ./install.sh --pipx --prefix-dir "/usr/local" --effective-installation-dir 
 - There will be an error about the `systemctl` command that cannot be found: **ignore it**, we will fix that below.
 
 4. Clone _this_ (fw-fanctrl-runit-files) repository.
-5. Install the 2 files in this repo on their exact location as in this repo (`/etc/sv`). If you are _not_ running Void Linux the location of the service files can be different, check the documentation of your distribution. **The files should be executable**, do a `chmod +x run` or `chmod +x finish` if needed, but this shouldn't be necessary if you cloned the repository.
+5. Install the 2 files in this repo on their exact location as in this repo (`/etc/sv/fw-fanctrl`). If you are _not_ running Void Linux the location of the service files base directory (here /etc/sv) can be different, check the documentation of your distribution. **The files should be executable**, do a `chmod +x run` or `chmod +x finish` if needed, but this shouldn't be necessary if you cloned the repository.
 6. Enable the service on Void Linux (command/locations can be differfent on your distrubution):
 ```
 sudo ln -s /etc/sv/fw-fanctrl /var/service
